@@ -1,0 +1,55 @@
+DwC-A Internal Consistency Report
+Archive: /Users/seltmann/Documents/kummel/dwca_kummel_2026
+Zip: /Users/seltmann/Documents/kummel/dwca_kummel_2026.zip
+Generated: 2026-07-30T15:41:42
+
+ERRORS: 2
+- zip: occurrence.tsv differs from folder copy
+- zip: associatedMedia.tsv differs from folder copy
+
+WARNINGS: 0
+
+OK CHECKS: 43
+- archive folder: all expected files are present
+- archive folder: no unexpected extra files
+- occurrence.tsv: header order matches expected
+- occurrence.tsv: every row has 31 columns
+- occurrence.tsv: TSV hygiene clean (CRLF, no quotes/NULs/trailing blanks)
+- associatedMedia.tsv: header order matches expected
+- associatedMedia.tsv: every row has 16 columns
+- associatedMedia.tsv: TSV hygiene clean (CRLF, no quotes/NULs/trailing blanks)
+- row counts: occurrence and associatedMedia both have 18896 data rows
+- meta.xml core: delimiter/header/rowType attributes match
+- meta.xml core: file location matches
+- meta.xml core: id maps index 0 to occurrenceID
+- meta.xml core: field indexes/terms match header order
+- meta.xml extension: delimiter/header/rowType attributes match
+- meta.xml extension: file location matches
+- meta.xml extension: coreid maps index 0 to occurrenceID
+- meta.xml extension: field indexes/terms match header order
+- occurrence.tsv: occurrenceID values are nonblank, unique UUIDs
+- associatedMedia.tsv: occurrenceID values are nonblank, unique UUIDs
+- core/extension join: occurrenceID sets are identical
+- media paths: occurrence.associatedMedia and associatedMedia.identifier match by occurrenceID
+- media paths: all identifiers are unique /2026/ .jpg URLs with no whitespace
+- datasetName: all occurrence rows use Marc Kummel Photography
+- datasetID: one value across occurrence rows (urn:uuid:e495db61-2817-4938-b78a-6dd38803a3bb)
+- basisOfRecord: all rows use HumanObservation
+- license: one CC BY 4.0 URL across occurrence rows
+- associatedMedia format: all rows are image/jpeg
+- associatedMedia scientificName mirrors occurrence scientificName by occurrenceID
+- associatedMedia vernacularName mirrors occurrence vernacularName by occurrenceID
+- scientificName: no blanks
+- taxonRank: all values are in expected set ['class', 'family', 'genus', 'kingdom', 'order', 'phylum', 'species', 'subspecies', 'variety']
+- taxonomy rank consistency: no lower-rank fields populated below taxonRank
+- species/subspecies epithet consistency: expected epithet fields are populated
+- eventDate: all parse as ISO datetimes; range 2005-07-17 to 2026-04-20
+- coordinates: all decimalLatitude/decimalLongitude values are numeric and in range
+- coordinateUncertaintyInMeters: all values are numeric and nonnegative
+- geography values: country={'United States': 18896}, stateProvince={'California': 18438, 'Oregon': 458}
+- eml.xml: title matches datasetName
+- eml.xml: pubDate present (2026-04-20)
+- eml.xml: CC BY 4.0 license URL present
+- zip: contains exactly the expected four root files
+- zip: meta.xml matches folder copy
+- zip: eml.xml matches folder copy

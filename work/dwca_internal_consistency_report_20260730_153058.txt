@@ -1,0 +1,55 @@
+DwC-A Internal Consistency Report
+Archive: /Users/seltmann/Documents/kummel/dwca_kummel_2026
+Zip: /Users/seltmann/Documents/kummel/dwca_kummel_2026.zip
+Generated: 2026-07-30T15:30:58
+
+ERRORS: 0
+
+WARNINGS: 2
+- taxonomy rank consistency: 35 rows have lower-rank fields populated below taxonRank, examples [('0699effb-ed64-494d-a703-6c81a9d49a9c', 'Cleomaceae', 'family', ['genus']), ('2af85c08-73ad-44e6-b522-24a583d0c3dd', 'Fagaceae', 'family', ['genus']), ('6253cb47-8741-4642-b503-70eda3bf21fb', 'Tenthredinidae', 'family', ['genus']), ('6ab528b7-1865-437b-b49e-ac198bb7c9b7', 'Fagaceae', 'family', ['genus']), ('9fdcba04-6a42-45e6-8b09-30c839fdba00', 'Fagaceae', 'family', ['genus']), ('d6874d1b-2cad-4f1d-b4d1-26fb5efc4463', 'Fagaceae', 'family', ['genus']), ('84d9a429-23f1-44fe-a33d-7fd343190403', 'Saxifragaceae', 'family', ['genus']), ('54f87e21-4820-42b0-85ee-092d8f57f7b6', 'Rosaceae', 'family', ['genus']), ('8986dbd4-93d4-4684-a8b1-95aca8136328', 'Thomisidae', 'family', ['genus']), ('f2fe66ca-8f0d-4cf4-a968-f115c4405f58', 'Polyporaceae', 'family', ['genus'])]
+- species/subspecies epithet consistency: 4 rows missing expected genus/specific/infraspecific fields, examples [('c5f9d3e6-8537-404d-a561-b608d296c271', 'Eriogonum fasciculatum polifolium', 'Eriogonum', 'fasciculatum', ''), ('c0db3f70-510e-401b-8fa1-555df5219f8a', 'Crepis vesicaria taraxacifolia', 'Crepis', 'vesicaria', ''), ('b68935c4-298f-4f7c-9171-c88a72cbd7b6', 'Soft brown scale', 'Coccus', 'brown', ''), ('31320a2c-a47d-439b-ba4b-1472f476beab', 'Stropharia aeruginosa earthwormia', 'Stropharia', 'aeruginosa', '')]
+
+OK CHECKS: 43
+- archive folder: all expected files are present
+- archive folder: no unexpected extra files
+- occurrence.tsv: header order matches expected
+- occurrence.tsv: every row has 31 columns
+- occurrence.tsv: TSV hygiene clean (CRLF, no quotes/NULs/trailing blanks)
+- associatedMedia.tsv: header order matches expected
+- associatedMedia.tsv: every row has 16 columns
+- associatedMedia.tsv: TSV hygiene clean (CRLF, no quotes/NULs/trailing blanks)
+- row counts: occurrence and associatedMedia both have 18896 data rows
+- meta.xml core: delimiter/header/rowType attributes match
+- meta.xml core: file location matches
+- meta.xml core: id maps index 0 to occurrenceID
+- meta.xml core: field indexes/terms match header order
+- meta.xml extension: delimiter/header/rowType attributes match
+- meta.xml extension: file location matches
+- meta.xml extension: coreid maps index 0 to occurrenceID
+- meta.xml extension: field indexes/terms match header order
+- occurrence.tsv: occurrenceID values are nonblank, unique UUIDs
+- associatedMedia.tsv: occurrenceID values are nonblank, unique UUIDs
+- core/extension join: occurrenceID sets are identical
+- media paths: occurrence.associatedMedia and associatedMedia.identifier match by occurrenceID
+- media paths: all identifiers are unique /2026/ .jpg URLs with no whitespace
+- datasetName: all occurrence rows use Marc Kummel Photography
+- datasetID: one value across occurrence rows (urn:uuid:e495db61-2817-4938-b78a-6dd38803a3bb)
+- basisOfRecord: all rows use HumanObservation
+- license: one CC BY 4.0 URL across occurrence rows
+- associatedMedia format: all rows are image/jpeg
+- associatedMedia scientificName mirrors occurrence scientificName by occurrenceID
+- associatedMedia vernacularName mirrors occurrence vernacularName by occurrenceID
+- scientificName: no blanks
+- taxonRank: all values are in expected set ['class', 'family', 'genus', 'kingdom', 'order', 'phylum', 'species', 'subspecies', 'variety']
+- eventDate: all parse as ISO datetimes; range 2005-07-17 to 2026-04-20
+- coordinates: all decimalLatitude/decimalLongitude values are numeric and in range
+- coordinateUncertaintyInMeters: all values are numeric and nonnegative
+- geography values: country={'United States': 18896}, stateProvince={'California': 18438, 'Oregon': 458}
+- eml.xml: title matches datasetName
+- eml.xml: pubDate present (2026-04-20)
+- eml.xml: CC BY 4.0 license URL present
+- zip: contains exactly the expected four root files
+- zip: occurrence.tsv matches folder copy
+- zip: associatedMedia.tsv matches folder copy
+- zip: meta.xml matches folder copy
+- zip: eml.xml matches folder copy
